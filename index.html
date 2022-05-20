@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de CEP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CEP Automático</h1>
+    <article class="form-bg">
+        <form action="" class="formulario">
+            <fieldset>
+                <label for="cep">CEP:</label>
+                <input type="number" name="cep" id="cep">
+                <label for="number">Número:</label>
+                <input type="number" name="number" id="number">
+                <label for="logradouro">Rua:</label>
+                <input type="text" name="logradouro" id="logradouro">
+            </fieldset>
+
+            <fieldset>
+                <label for="bairro">Bairro:</label>
+                <input type="text" name="bairro" id="bairro">
+                <label for="estado">Estado:</label>
+                <input type="text" name="estado" id="estado">
+                <label for="complemento">Complemento:</label>
+                <input type="text" name="complemento" id="complemento">
+            </fieldset>
+
+            <input type="submit" value="Enviar" id="enviar">
+        </form>
+    </article>
+
+    <script src="script.js"></script>
+</body>
+</html>
