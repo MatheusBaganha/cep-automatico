@@ -9,37 +9,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="svg/icon.svg" type="image/x-icon">
 </head>
 <body>
+    <div data-loader></div>
     <h1>CEP Automático</h1>
     <article class="form-bg">
         <form action="" class="formulario">
             <fieldset>
                 <label for="cep">CEP:</label>
-                <input data-cep type="text" name="cep" id="cep">
+                <input data-cep type="text" name="cep" id="cep" placeholder="00000-000">
 
                 <label for="number">Número:</label>
                 <input type="number" name="number" id="number">
 
-                <label for="logradouro">Rua:</label>
-                <input data-logradouro type="text" name="logradouro" id="logradouro">
+                <label for="bairro">Bairro:</label>
+                <input data-input data-bairro type="text" name="bairro" id="bairro">
             </fieldset>
 
             <fieldset>
-                <label for="bairro">Bairro:</label>
-                <input data-bairro type="text" name="bairro" id="bairro">
+                <label for="logradouro">Rua:</label>
+                <input data-input data-logradouro type="text" name="logradouro" id="logradouro" required>
+                
+                <label for="cidade">Cidade:</label>
+                <input data-input data-cidade type="text" name="cidade" id="cidade" required>
 
-                <label for="estado">Estado:</label>
-                <input data-estado type="text" name="estado" id="estado">
-
-                <label for="complemento">Complemento:</label>
-                <input type="text" name="complemento" id="complemento">
+                <label for="uf">UF:</label>
+                <input data-input data-uf type="text" name="uf" id="uf" required placeholder="SP">
             </fieldset>
 
-            <input type="submit" value="Enviar" id="enviar">
+            <input data-btn type="submit" value="Enviar" id="enviar">
         </form>
     </article>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

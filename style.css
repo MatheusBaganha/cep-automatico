@@ -6,7 +6,7 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: rgb(211, 211, 211);
-    color: rgb(19, 19, 19);
+    color: #131313;
 }
 
 h1 {
@@ -17,14 +17,36 @@ h1 {
 .form-bg {
     background-color: rgb(221, 221, 221);
     border: 1px solid rgb(184, 184, 184);
-    max-width: 720px;
+    max-width: 700px;
     height: auto;
     margin: 5vh auto;
     padding: 20px 15px;
     border-radius: 15px;
 }
 
+.load {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    z-index: 200;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #75ffdd;
+    animation: loading 2s linear infinite;
+}
 
+@keyframes loading {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg); 
+    }
+}
 
 .formulario label, .formulario input {
     display: block;
@@ -45,14 +67,13 @@ h1 {
     margin-bottom: 26px;
     padding-left: 6px;
     border: 1px solid rgb(117, 117, 117);
-
 }
 
 .formulario {
     display: flex;
     flex: 1 1 auto;
     flex-wrap: wrap;
-    gap: 32px 150px;
+    gap: 32px 120px;
     justify-content: center;
 }
 
@@ -65,12 +86,12 @@ fieldset {
     display: block;
     width: 200px;
     height: 40px;
-    background-color: rgb(80, 192, 80);
+    background-color: rgb(105, 218, 105);
     border: 1px solid rgb(51, 143, 51);
     color: rgb(19, 19, 19);
     border-radius: 3px;
     margin-top: -22px;
-    margin-right: 445px;
+    margin-right: 420px;
     cursor: pointer;
     font-size: 1.3rem;
     font-weight: 500;
