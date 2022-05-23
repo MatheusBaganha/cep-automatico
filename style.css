@@ -4,24 +4,30 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
     background-color: rgb(211, 211, 211);
     color: #131313;
 }
 
+body, #enviar {
+    font-family: 'Inter', sans-serif;
+}
+
 h1 {
     text-align: center;
-    margin-top: 10vh;
+    margin: 8vh 0;
+    font-size: 2rem;
 }
 
 .form-bg {
+    display: block;
     background-color: rgb(221, 221, 221);
     border: 1px solid rgb(184, 184, 184);
     max-width: 700px;
     height: auto;
-    margin: 5vh auto;
-    padding: 20px 15px;
+    margin: 0 auto 5vh auto;
+    padding: 20px;
     border-radius: 15px;
+    position: relative;
 }
 
 .load {
@@ -52,13 +58,13 @@ h1 {
     display: block;
     height: 36px;
     border-radius: 3px;
+    width: 280px;
     max-width: 400px;
 }
 
 .formulario label {
     font-size: 1.3rem;
     font-weight: 500;
-
 }
 
 .formulario input {
@@ -73,7 +79,7 @@ h1 {
     display: flex;
     flex: 1 1 auto;
     flex-wrap: wrap;
-    gap: 32px 120px;
+    gap: 32px 90px;
     justify-content: center;
 }
 
@@ -88,15 +94,78 @@ fieldset {
     height: 40px;
     background-color: rgb(105, 218, 105);
     border: 1px solid rgb(51, 143, 51);
+    box-shadow: 1px 1px 3px rgba(41, 38, 38, 0.308);
     color: rgb(19, 19, 19);
     border-radius: 3px;
     margin-top: -22px;
-    margin-right: 420px;
+    margin-right: 460px;
     cursor: pointer;
     font-size: 1.3rem;
     font-weight: 500;
+    padding: 6px 30px 30px 30px;
 }
 
 #enviar:hover {
     background-color: rgb(58, 165, 58);
+}
+
+@media(max-width: 760px) {
+    .form-bg {
+        max-width: 400px;
+        padding: 15px;
+    }
+
+    .formulario label, .formulario input {
+        width: 300px;
+    }
+    
+    .formulario input {
+        margin-bottom: 26px;
+        padding-left: 6px;
+        border: 1px solid rgb(117, 117, 117);
+    }
+    
+    .formulario {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: flex-start;
+        margin-left: 42px;
+    }
+    
+    fieldset {
+        margin-top: 32px;
+    }
+    
+    #enviar {
+        width: 140px;
+        height: 35px;
+        margin-top: -7px;
+        margin-right: 0px;
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width: 480px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .form-bg {
+        width: 18rem;
+        padding: 10px;
+    }
+
+    .formulario label, .formulario input {
+        width: 13rem;
+    }
+
+    .formulario {
+        margin-left: 32px;
+    }
+
+    #enviar {
+        width: 130px;
+        height: 30px;
+        font-size: 1.2rem;
+    }  
 }
